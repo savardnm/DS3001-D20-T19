@@ -14,12 +14,15 @@ all_users = list(set([row['user_id'] for index, row in user_data.iterrows()]))
 
 output = pd.DataFrame(index = all_users, columns = [row['tag_id'] for index, row in tag_data.iterrows()])
 counts = pd.DataFrame(index = all_users, columns = [row['tag_id'] for index, row in tag_data.iterrows()])
-
+total = 0
 for user_index, user_row in user_data.iterrows():
     user_id = user_row['user_id']
     book_id = user_row['book_id']
     rating = user_row['rating']
     count = 0
+    print(total)
+    
+    total += 1
     for book_index, book_row in book_data.iterrows():
         if (book_id == book_row['goodreads_book_id']):
             if (book_row['tag_id'] in output.columns):
