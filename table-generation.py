@@ -7,8 +7,8 @@ This is a temporary script file.
 import pandas as pd
 
 tag_data = pd.read_csv('final-output.csv')
-user_data = pd.read_csv('ratings-2.csv')
-book_data = pd.read_csv('shortened-books.csv')
+user_data = pd.read_csv('ratings-user-sorted.csv')
+book_data = pd.read_csv('shortened-books-2.csv')
 id_data = pd.read_csv('books.csv')
 
 print(id_data.iloc[1-1]['book_id'])
@@ -45,4 +45,4 @@ for index, row in output.iterrows():
             output[name][index] = (output[name][index]-0.1) / max(counts[name][index],1)
 
 print (output)
-output.to_csv("absolute-final-2.csv", index=True)
+output.to_csv("absolute-final-3.csv", index=True)
