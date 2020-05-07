@@ -2,8 +2,6 @@ import tkinter as tk
 import pandas as pd
 import numpy as np
 from PIL import Image, ImageTk
-import requests
-from io import BytesIO
 import io
 import urllib.parse
 
@@ -119,9 +117,6 @@ class MainView(tk.Frame):
 
         next_btn = tk.Button(buttonframe, text="Next", command = self.next_page, background = "dodgerblue")
         back_btn = tk.Button(buttonframe, text="Back", command = self.back_page, background = "dodgerblue") 
-        b1 = tk.Button(buttonframe, text="Page 1", command=self.p1.lift)
-        b2 = tk.Button(buttonframe, text="Page 2", command=self.p2.lift)
-        b3 = tk.Button(buttonframe, text="Page 3", command=self.p3.lift)
 
         next_btn.pack(in_=buttonframe, side="right")
         back_btn.pack(in_=buttonframe, side="right")
