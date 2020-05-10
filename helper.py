@@ -162,7 +162,7 @@ def draw_movie_clusters(clustered, max_users, max_movies):
             # if c > 6:
             #    break
                 
-def get_most_rated_genres(user_movie_ratings, max_number_of_movies):
+def get_most_rated_movies(user_movie_ratings, max_number_of_movies):
     # 1- Count
     user_movie_ratings = user_movie_ratings.append(user_movie_ratings.count(), ignore_index=True)
     # 2- sort
